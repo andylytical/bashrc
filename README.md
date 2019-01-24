@@ -5,3 +5,4 @@
 
 # Other bashrc.d files:
 * https://github.com/andylytical/dockerfiles/blob/master/.bashrc.d/docker.sh
+* https://github.com/andylytical/git-config/blob/master/bashrc.d/git.sh
