@@ -1,7 +1,7 @@
 # bashrc
 
 # Setup
-1. `grep 'User specific setup' -q || curl https://raw.githubusercontent.com/andylytical/bashrc/master/bashrc >> ~/.bashrc`
+1. `grep -q 'User specific setup' ~/.bashrc || curl https://raw.githubusercontent.com/andylytical/bashrc/master/bashrc >> ~/.bashrc`
 1. `mkdir -p ~/.bashrc.d`
 
 # See also:
