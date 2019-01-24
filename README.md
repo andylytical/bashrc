@@ -1,7 +1,7 @@
 # bashrc
 
 # Setup
-1. `curl quickstart.sh | bash`
+1. `curl https://raw.githubusercontent.com/andylytical/bashrc/master/quickstart.sh | bash`
 
 # Other bashrc.d files:
 * https://github.com/andylytical/dockerfiles/blob/master/.bashrc.d/docker.sh
