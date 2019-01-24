@@ -1,8 +1,7 @@
 # bashrc
 
 # Setup
-1. `git clone https://github.com/andylytical/bashrc.git`
-1. `cd bashrc; ./setup.sh`
+1. `curl quickstart.sh | bash`
 
-# See also:
+# Other bashrc.d files:
 * https://github.com/andylytical/dockerfiles/blob/master/.bashrc.d/docker.sh
