@@ -1,8 +1,8 @@
 # bashrc
 
 # Setup
-1. `grep -q 'User specific setup' ~/.bashrc || curl https://raw.githubusercontent.com/andylytical/bashrc/master/bashrc >> ~/.bashrc`
-1. `mkdir -p ~/.bashrc.d`
+1. `git clone https://github.com/andylytical/bashrc.git`
+1. `cd bashrc; ./setup.sh`
 
 # See also:
 * https://github.com/andylytical/dockerfiles/blob/master/.bashrc.d/docker.sh
