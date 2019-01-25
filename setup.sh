@@ -2,10 +2,8 @@
 
 set -x
 
-#RC=~/.bashrc
-#RCDIR=~/.bashrc.d
-RC=~/.junk
-RCDIR=~/.junk.d
+RC=~/.bashrc
+RCDIR=~/.bashrc.d
 BASE=$( dirname $0 )
 
 # Ensure include exists in bashrc
