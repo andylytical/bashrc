@@ -1,3 +1,5 @@
 set -o vi
 
-export EDITOR=/usr/bin/vim
+editr=$(which vim)
+[[ -f "$editr" ]] && editr=/bin/vi
+export EDITOR="$editr"
