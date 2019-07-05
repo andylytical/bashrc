@@ -21,7 +21,7 @@ tgt=~/.$RC
 grep -q "$GREP_PATTERN" $tgt \
 || cat $src >>$tgt
 
-# Ensure include exists in bashrc
+# Ensure include exists in profile
 src="$BASE/$PROFILE"
 tgt=~/.$PROFILE
 grep -q "$GREP_PATTERN" $tgt \
