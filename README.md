@@ -4,5 +4,5 @@
 1. `curl https://raw.githubusercontent.com/andylytical/bashrc/master/quickstart.sh | bash`
 
 # Other bashrc.d files:
-* https://github.com/andylytical/dockerfiles/blob/master/.bashrc.d/docker.sh
-* https://github.com/andylytical/git-config/blob/master/bashrc.d/git.sh
+* https://raw.githubusercontent.com/andylytical/dockerfiles/master/.bashrc.d/docker.sh
+* https://raw.githubusercontent.com/andylytical/git-config/master/bashrc.d/git.sh
