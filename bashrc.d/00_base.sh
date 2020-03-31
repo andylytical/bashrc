@@ -15,3 +15,4 @@ pathmunge () {
 }
 
 pathmunge ~/bin
+pathmunge ~/.local/bin
