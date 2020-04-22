@@ -1,9 +1,14 @@
 bb() {
     local _action="${1:-help}"
+    local _cmd=/usr/local/bin/brewblox-ctl
     shift
     case "$_action" in
         h|help)
             _action='--help'
+            ;;
+        status|stat|s)
+            _cmd=docker-compose
+            _action=ps
             ;;
         start)
             _action=up
@@ -13,6 +18,6 @@ bb() {
             ;;
     esac
     pushd ~/brewblox
-    /usr/local/bin/brewblox-ctl "$_action" "${@}"
+    "$_cmd" "$_action" "${@}"
     popd
 }
