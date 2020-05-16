@@ -1,6 +1,6 @@
 bb() {
     local _action="${1:-help}"; shift
-    local _cmd=/home/pi/.local/bin/brewblox-ctl
+    local _cmd="${HOME}/.local/bin/brewblox-ctl"
     local _opts=( "${@}" )
     shift
     case "$_action" in
