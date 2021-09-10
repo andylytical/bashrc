@@ -13,3 +13,4 @@ fn=~/.minttyrc
   > "$fn" \
   curl -s "$url" \
   | sed '/FontHeight/c\FontHeight=11'
+}
