@@ -2,11 +2,7 @@ bb() {
   local _action="${1:-help}"; shift
   local _cmd="${HOME}/.local/bin/brewblox-ctl"
   local _opts=( "${@}" )
-  local _dokr_compose=$(which docker-compose || realpath -q -e "${HOME}/brewblox/.venv/bin/docker-compose")
-  [[ -x "${_dokr_compose}" ]] || {
-    echo "ERR cant find docker-compose '${_dokr_compose}'"
-    return 1
-  }
+  local _dokr_compose='docker compose'
   shift
   case "$_action" in
     h|help)
