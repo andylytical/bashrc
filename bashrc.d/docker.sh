@@ -7,7 +7,7 @@ alias dps="docker ps -a"
 alias da="docker attach"
 alias fedora="docker run --rm -it fedora bash"
 alias ubuntu="docker run --rm -it ubuntu bash"
-alias p3='docker run --rm -it python:3'
+alias p3='docker run --rm -it --pull always --mount type=bind,src=$HOME,dst=/home python:3'
 
 # Cleanup aliases
 alias dpclean='docker ps -a -q | xargs -r docker rm'
