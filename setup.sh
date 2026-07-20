@@ -5,6 +5,7 @@ set -x
 BASE=$( dirname $0 )
 RC=bashrc
 RCDIR=~/.bashrc.d
+LOCAL_BIN=${HOME}/.local/bin
 PROFILE=bash_profile
 GREP_PATTERN='CUSTOM INCLUDE FROM GITHUB/ANDYLYTICAL/BASHRC'
 SUFFIX=$(date +%s)
@@ -14,6 +15,22 @@ mkdir -p $RCDIR
 for src in $BASE/bashrc.d/*.sh; do
   tgt=$RCDIR/$(basename $src)
   install --compare --backup --suffix=$SUFFIX "$src" "$tgt"
+done
+
+# Copy executable files to local bin
+mkdir -p "${LOCAL_BIN}"
+for src in $BASE/bin/*.sh; do
+  tgt="${LOCAL_BIN}"/$(basename "$src")
+  install --compare --backup --suffix=$SUFFIX "$src" "$tgt"
+done
+
+# Try to install tmuxp configs
+TMUXP_CONFIGDIR=$( "$BASE"/bin/tmuxp_configdir.sh )
+[[ -n "${TMUXP_CONFIGDIR}" ]] \
+&& [[ -d "${TMUXP_CONFIGDIR}" ]] \
+&& for src in "${BASE}"/tmuxp/*; do
+    tgt="${TMUXP_CONFIGDIR}"/$( basename "${src}")
+    install --mode 0600 --compare --backup --suffix=$SUFFIX "$src" "$tgt"
 done
 
 # Ensure include exists in bashrc

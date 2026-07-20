@@ -14,3 +14,19 @@ ft() {
     echo "No workspace given"
   fi
 }
+
+
+# fzf picker to make a tmuxp workspace for a git repo working dir
+fg() {
+  local dir_path
+  dir_path=$( \
+  ls_git_dirs.sh \
+  | fzf \
+    --header "Which git repo?" \
+    --preview "ls {}" )
+  if [[ -d "${dir_path}" ]]; then
+    dir2tmux.sh "${dir_path}"
+  else
+    echo "Nevermind"
+  fi
+}
