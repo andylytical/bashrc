@@ -1,0 +1,18 @@
+session_name: ldap
+windows:
+- window_name: ldap-tools
+  layout: even-horizontal
+  panes:
+    - cd working/ncsa/ldap-tools
+    - cd working/ncsa/ldap-tools
+- window_name: asd-prov
+  layout: even-vertical
+  panes:
+    - ssh asd-pup01
+    - ssh asd-prov01
+- window_name: v10-prov
+  panes:
+    - ssh ldap-v10-prov
+- window_name: ldaprw-01
+  panes:
+    - ssh isf-ldaprw-01

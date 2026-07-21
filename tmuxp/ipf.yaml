@@ -1,0 +1,36 @@
+session_name: ipf
+start_directory: ${HOME}/working/access/ipf
+windows:
+- window_name: ipf
+  layout: even-horizontal
+  panes:
+    - blank
+    - blank
+- window_name: delta
+  layout: even-vertical
+  panes:
+    - echo ssh delta
+    - echo ssh deltaai
+- window_name: uky_tacc
+  layout: even-vertical
+  panes:
+    - echo ssh tacc
+    - echo ssh kyric
+- window_name: psc
+  layout: even-horizontal
+  panes:
+    - echo ssh bridges-2
+    - echo ssh neocortex
+- window_name: purdue
+  layout: even-vertical
+  panes:
+    - echo ssh anvil
+    - echo ssh anvilai
+- window_name: tamu
+  layout: even-vertical
+  panes:
+    - echo ssh aces
+    - echo ssh launch
+- window_name: sdsc
+  panes:
+    - echo ssh sdsc

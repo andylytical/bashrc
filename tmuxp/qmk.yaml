@@ -1,0 +1,14 @@
+session_name: qmk
+start_directory: ${HOME}/working/personal/qmk_userspace/keyboards/xbows
+windows:
+- window_name: userspace
+  layout: even-horizontal
+  panes:
+    - cd knight_plus/keymaps/andylytical
+    - cd knight/keymaps/andylytical
+- window_name: firmware
+  panes:
+    - cd ${HOME}/working/personal/qmk_firmware
+- window_name: numpad
+  panes:
+    - cd numpad_v2/keymaps/andylytical

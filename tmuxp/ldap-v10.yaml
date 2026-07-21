@@ -1,0 +1,31 @@
+session_name: ldap
+windows:
+- window_name: ldap-tools
+  layout: even-horizontal
+  panes:
+    - cd working/ncsa/ldap-tools
+    - cd working/ncsa/ldap-tools
+- window_name: asd-prov
+  layout: even-vertical
+  panes:
+    - ssh asd-pup01
+    - ssh asd-prov01
+- window_name: v10-ALL
+  layout: tiled
+  panes:
+    - ssh ldap1.delta
+    - ssh ldap2.delta
+    - ssh ldap1-hydro
+    - ssh ldap2-hydro
+    - ssh ldap1.ngale
+    - ssh ldap2.ngale
+    - ssh ldap-mg1
+    - ssh ldap-mg2
+    - ssh ldap-radiant1
+    - ssh ldap-radiant2
+    - ssh ldap1
+    - ssh ldap2
+    - ssh ldap3
+    - ssh ldap4
+    - ssh ldap-auth1
+    - ssh ldap-auth4

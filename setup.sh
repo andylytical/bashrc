@@ -25,7 +25,12 @@ for src in $BASE/bin/*.sh; do
 done
 
 # Try to install tmuxp configs
-TMUXP_CONFIGDIR=$( "$BASE"/bin/tmuxp_configdir.sh )
+TMUXP_CONFIGDIR="${HOME}"/$(
+  tmuxp ls --json \
+  | jq -r '.global_workspace_dirs[] | if .exists == true and .active == true then .path else empty end' \
+  | head -1 \
+  | sed -e 's/~\///'
+)
 [[ -n "${TMUXP_CONFIGDIR}" ]] \
 && [[ -d "${TMUXP_CONFIGDIR}" ]] \
 && for src in "${BASE}"/tmuxp/*; do
