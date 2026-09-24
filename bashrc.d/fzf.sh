@@ -1,4 +1,5 @@
 # fzf picker for tmuxp Workspaces
+# ft => Fzf picker for Tmuxp
 ft() {
   local workspace
   workspace=$( tmuxp ls --json \
@@ -16,7 +17,8 @@ ft() {
 
 
 # fzf picker to make a tmuxp workspace for a git repo working dir
-fg() {
+# fw => Fzf picker for Workdir (ie: git workdir)
+fw() {
   local dir_path
   dir_path=$( \
   ls_git_dirs.sh \
@@ -32,6 +34,7 @@ fg() {
 
 
 # fzf picker to reattach to an existing tmux session
+# fr => Fzf picker for Reconnecting to an existing session
 fr() {
   local tmux_session_name
   tmux_session_name=$( \
