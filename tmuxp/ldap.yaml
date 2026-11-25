@@ -16,3 +16,41 @@ windows:
 - window_name: ldaprw-01
   panes:
     - ssh isf-ldaprw-01
+- window_name: ldap-1
+  layout: tiled
+  panes:
+    - ssh isf-ldap-01
+    - ssh isf-ldap-02
+    - ssh isf-ldap-03
+    - ssh isf-ldap-04
+    - ssh isf-ldap-09
+    - ssh isf-ldap-10
+    - ssh isf-ldap-11
+    - ssh isf-ldap-12
+- window_name: ldap-2
+  layout: tiled
+  panes:
+    - ssh isf-ldap-05
+    - ssh isf-ldap-06
+    - ssh isf-ldap-07
+    - ssh isf-ldap-08
+    - ssh isf-ldap-13
+    - ssh isf-ldap-14
+    - ssh isf-ldap-15
+    - ssh isf-ldap-16
+- window_name: ldap-test
+  layout: tiled
+  panes:
+    - ssh isf-ldap-01-test
+    - ssh isf-ldap-02-test
+    - ssh isf-ldap-03-test
+    - ssh isf-ldap-04-test
+    - ssh isf-ldap-05-test
+    - ssh isf-ldap-06-test
+- window_name: ldap-auth
+  layout: tiled
+  panes:
+    - ssh isf-ldapauth-01
+    - ssh isf-ldapauth-02
+    - ssh isf-ldapauth-05
+    - ssh isf-ldapauth-06
